@@ -12,19 +12,23 @@
         static void Main(string[] args)
         {
             //введем диапазон значений по Цельсию для таблицы
-            Console.WriteLine("Введите диапазон значений t по Цельсию: ");
-            double t = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите начальное значение tmin по Цельсию: ");
+            double tmin = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите конечное значение tmax по Цельсию: ");
+            double tmax = double.Parse(Console.ReadLine());
+            //введем шаг, на который должен увеличиваться значение
             Console.WriteLine("Введите шаг изменения значения по Цельсию: ");
             double step = double.Parse(Console.ReadLine());
             Console.Clear();
+            //напишем шапочку для таблицы
             Console.WriteLine("Таблица соответствия в градусах Цельсия и Фаренгейта");
-            for (double C = 0;C<t;C+=step)
+            Console.WriteLine("C\t|F");
+            for (double C = tmin;C<=tmax;C+=step)
             {
                 double F = C * 1.8 + 32.0;
-                Console.Write(Math.Round(C) + "\t|");
-                Console.WriteLine(F);
+                Console.Write(Math.Round(C,2) + "\t|");
+                Console.WriteLine(Math.Round(F,2));
             }
-            
         }
     }
 }
