@@ -36,6 +36,7 @@
                 Console.WriteLine();
             }
             Console.WriteLine();
+            
             for (int i = 0; i < chars1.GetLength(0); i++)
             {
                 for (int j = 0; j < chars1.GetLength(1); j++)
@@ -45,37 +46,57 @@
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("---------------");    
+            bool isRav = true;
             for (int i = 0; i < chars.GetLength(0); i++)
             {
-                for (int j = 0; j < chars1.GetLength(1); j++)
+                for (int j = 0; j < chars.GetLength(1); j++)
                 {
-                    if (chars[i, j] == chars1[i,j])
+                    if (chars[i,j] != chars1[i,j])
                     {
-                        Console.BackgroundColor = ConsoleColor.Red;
+                        isRav = false;
+                        break;
                     }
-                    Console.Write(chars[i,j]);
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.Write(" ");
                 }
-                Console.WriteLine();
             }
-            Console.WriteLine();
-            for (int i = 0; i < chars.GetLength(0); i++)
+            //посмотрим, чему равно isCentralSimmetric
+            Console.WriteLine(isRav);
+            Console.WriteLine("---------------");
+            if (isRav == false)
             {
-                for (int j = 0; j < chars1.GetLength(1); j++)
+                for (int i = 0; i < chars.GetLength(0); i++)
                 {
-                    if (chars[i, j] == chars1[i, j])
+                    for (int j = 0; j < chars.GetLength(1); j++)
                     {
-                        Console.BackgroundColor = ConsoleColor.Red;
+                        if (chars[i, j] == chars1[i, j])
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                        }
+                        Console.Write(chars[i, j]);
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.Write(" ");
                     }
-                    Console.Write(chars1[i, j]);
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.Write(" ");
+                    Console.WriteLine();
                 }
                 Console.WriteLine();
+                for (int i = 0; i < chars1.GetLength(0); i++)
+                {
+                    for (int j = 0; j < chars1.GetLength(1); j++)
+                    {
+                        if (chars[i, j] == chars1[i, j])
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                        }
+                        Console.Write(chars1[i, j]);
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine();
+                }
             }
-
+            else
+            {
+                Console.WriteLine("Матрицы равны");
+            }
 
         }
     }
