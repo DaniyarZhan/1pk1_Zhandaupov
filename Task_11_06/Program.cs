@@ -22,6 +22,7 @@
             }
             Console.WriteLine();
             Massive(array);
+                       
         }
         /// <summary>
         /// Массив, значения которого увеличились на 1 
