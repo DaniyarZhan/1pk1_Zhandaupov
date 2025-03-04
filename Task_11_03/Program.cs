@@ -19,11 +19,11 @@ namespace Task_11_03
             Console.WriteLine("Количество гласных букв - " + vowel);
         }
         /// <summary>
-        /// Согласные буквы
+        /// Согласные буквы обоих алфавитов
         /// </summary>
         public static string consonant_letters = "бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxz";
         /// <summary>
-        /// Гласные буквы
+        /// Гласные буквы обоих алфавитов
         /// </summary>
         public static string vowel_letters = "аеёиоуыэюяaeiouy";
         /// <summary>
