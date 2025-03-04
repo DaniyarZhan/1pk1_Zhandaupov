@@ -16,7 +16,7 @@
             Console.WriteLine("значения вне метода - " + num1 + "," + num2);
         }
         /// <summary>
-        /// Два числа
+        /// Два числа, которые меняются местами
         /// </summary>
         /// <param name="numbers1">первое число</param>
         /// <param name="numbers2">второе число</param>
